@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #726A69;
+}
+
+h2 {
+    font-family: "collier", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+    letter-spacing: 15px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.home{
+    background: #FFFDFA;
+}
+
+.about{
+    background-color: #EAE4DE;
+}
+
+.about p{
+    text-align: center;
+    padding-top: 120px ;
+    padding-bottom: 200px;
+    line-height: 35px;
+}
+
+.shops{
+    background-color: #EAE4DE;
+}
+
+.station{
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 1px solid #726A69 ;
+}
+
+
+
