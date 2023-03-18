@@ -94,6 +94,7 @@ a:visited {
     padding-bottom: 80px;
 }
 
+
 .shop2 {
     display: flex;
     justify-content: center;
@@ -157,6 +158,10 @@ a:visited {
     padding-bottom: 70px;
 }
 
+.instagram-link{
+    width: 400px;
+}
+
 .left {
     margin-right: 30px;
 }
@@ -164,6 +169,10 @@ a:visited {
 .shop-link {
     margin-right: 50px;
     text-align: right;
+}
+
+.modaal-content-container {
+background-color: #FFFDFA;
 }
 
 .contents {
@@ -215,6 +224,10 @@ footer nav a {
     padding: 20px;
 }
 
+@media screen and (min-width: 768px){
+    .br-sp {display: none; }
+    }
+
 
 @media all and (max-width:480px) {
     .h2 {
@@ -243,7 +256,38 @@ footer nav a {
         display: block;
     }
 
-    .shop{
+    .shop {
         display: block;
     }
+
+    .shop-text {
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+
+    .contents {
+        padding: 80px 30px 60px 30px;
+    }
+
+    .shop-list{
+        padding-right: 20px;
+    }
+
+    .shop div {
+        padding: 0;
+    }
+
+    footer{
+margin: 0 auto;
+    }
+
+    .link{
+        width: 100vw;
+    }
+
+
 }
