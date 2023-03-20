@@ -4,34 +4,156 @@
     color: #726A69;
 }
 
-.home nav {
-    padding: 30px;
+header img {
+    height: 8vh;
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown4 {
+    /*描画位置※位置は適宜調整してください*/
     position: absolute;
-    right: 50px;
+    bottom: 10%;
+    right: 7%;
+    /*矢印の動き1秒かけて永遠にループ*/
+    animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove {
+    0% {
+        bottom: 1%;
+    }
+
+    50% {
+        bottom: 3%;
+    }
+
+    100% {
+        bottom: 1%;
+    }
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span {
+    /*描画位置*/
+    position: absolute;
+    left: -20px;
+    bottom: 10px;
+    /*テキストの形状*/
+    color: #726A69;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    /*矢印の形状*/
+    width: 2px;
+    height: 20px;
+    background: #726A69;
+    transform: skewX(-31deg);
+}
+
+.scrolldown4:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*矢印の形状*/
+    width: 2px;
+    height: 50px;
+    background: #726A69;
+}
+
+.nav {
+    background-color: #EAE4DE;
+}
+
+
+header nav {
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
     background: #EAE4DE;
 
 }
 
-.home nav ul {
+header nav ul {
     display: flex;
+    position: absolute;
+    right: 10vw;
 }
 
-.home nav li {
+header nav li {
     list-style: none;
     margin-left: 60px;
 }
 
-.home nav a {
+header nav a {
     font-size: 18px;
     text-decoration: none;
     letter-spacing: 5px;
 }
 
-.top {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(image/background.jpg);
+/* 
+.pc { display: block ; } */
+.sp1 {
+    display: none;
 }
+
+.sp2 {
+    display: none;
+}
+
+
+.first-view {
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    background-color: #FFFDFA;
+}
+
+.pc {
+    width: 922px;
+    border-radius: 0 30px 30px 0;
+    opacity: 0.6;
+}
+
+h1 {
+    font-family: "collier", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 90px;
+}
+
+.top {
+    position: absolute;
+    left: 50vw;
+}
+
+.sub-title {
+    padding-left: 175px;
+}
+
+.sub-title p {
+    text-align: left;
+    letter-spacing: 1px;
+    color: #B79997;
+    font-weight: 700;
+}
+
 
 h2 {
     font-family: "collier", sans-serif;
@@ -63,8 +185,14 @@ h3 {
     line-height: 35px;
 }
 
+.map {
+    background-color: #FFFDFA;
+}
+
 .map-img {
+    width: 85vw;
     padding-bottom: 150px;
+    margin: 0 auto;
 }
 
 #yoyogi:hover {
@@ -138,6 +266,7 @@ a:visited {
     background-color: #fff;
     text-align: center;
     margin: 60px;
+
 }
 
 .shop-name {
@@ -147,6 +276,7 @@ a:visited {
     font-size: 28px;
     padding-top: 30px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .shop-information {
@@ -158,8 +288,15 @@ a:visited {
     padding-bottom: 70px;
 }
 
-.instagram-link{
+.infomation{
+    display: flex;
+}
+
+.instagram-link {
     width: 400px;
+    padding: 20px;
+    padding-left: 40px;
+    display: flex;
 }
 
 .left {
@@ -171,8 +308,16 @@ a:visited {
     text-align: right;
 }
 
+.shop1-information {
+    display: flex;
+}
+
 .modaal-content-container {
-background-color: #FFFDFA;
+    background-color: #FFFDFA;
+}
+
+.modal-button {
+    text-decoration: none;
 }
 
 .contents {
@@ -190,6 +335,29 @@ background-color: #FFFDFA;
 
 .shop div {
     padding-right: 50px;
+}
+
+.shop1-text p {
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.shop1-text .shop-information p {
+    padding: 0;
+}
+
+.shop1-text .shop-information {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.shop-concept {
+    text-align: center;
+}
+
+.shop-information {
+    font-size: 14px;
 }
 
 footer {
@@ -219,17 +387,74 @@ footer nav a {
     justify-content: flex-end;
 }
 
+.link img {
+    padding-top: 70px;
+}
+
 .copyright {
     text-align: center;
     padding: 20px;
 }
 
-@media screen and (min-width: 768px){
-    .br-sp {display: none; }
+@media screen and (min-width: 768px) {
+    .br-sp {
+        display: none;
     }
+}
 
 
 @media all and (max-width:480px) {
+
+    .pc {
+        display: none;
+    }
+
+    .sp1 {
+        display: block;
+        position: absolute;
+        left: 10vw;
+        top: 170px;
+    }
+
+    .sp2 {
+        display: block;
+        position: absolute;
+        right: 10vw;
+        top: 370px;
+    }
+
+    .sp1,
+    .sp2 {
+        width: 60vw;
+border-radius: 10px;
+opacity: 0.6;
+    }
+
+    header nav li {
+        display: none;
+    }
+
+    .first-view{
+        align-items: flex-start;
+    }
+
+    .sub-title{
+        display: block;
+        padding-left: 0;
+        position: absolute;
+        top: 380px;
+        left: -150px;
+    }
+   
+
+    h1{
+
+        font-size: 60px;
+    line-height: 1.2;
+    position: absolute;
+    top: 150px;
+    }
+
     .h2 {
         font-size: 36px;
     }
@@ -268,12 +493,29 @@ footer nav a {
         margin-top: 10px;
     }
 
+    .instagram-link{
+        padding: 0;
+        padding-top: 30px;
+        width: 70vw;
+    }
+
+    .shop1-information{
+        display: block;
+    }
+
+    .infomation
+    {
+        display: block;
+    }
+
+
+
 
     .contents {
         padding: 80px 30px 60px 30px;
     }
 
-    .shop-list{
+    .shop-list {
         padding-right: 20px;
     }
 
@@ -281,11 +523,11 @@ footer nav a {
         padding: 0;
     }
 
-    footer{
-margin: 0 auto;
+    footer {
+        margin: 0 auto;
     }
 
-    .link{
+    .link {
         width: 100vw;
     }
 
